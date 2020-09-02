@@ -19,7 +19,7 @@ struct BusModelUnit: Codable {
     let prevPathPoints: [PathPoint]?
     let routeID: Int?
     let routeName: String?
-    let speed: Int
+    let speed: Int?
     let station: Station?
     let timeLocation: String?
     let vehicleID: String?

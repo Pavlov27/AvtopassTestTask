@@ -12,7 +12,7 @@ import YandexMapKit
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: YMKMapView!
 
-    var viewModel = ViewModel()
+    let viewModel = ViewModel()
 
     let cameraTarget = YMKPoint(latitude: 55.743638, longitude: 37.618203)
     let busImage = UIImage(named:"BusIcon2")!
@@ -29,32 +29,33 @@ class ViewController: UIViewController {
     }
 
     private func showBusOnMap() {
-        viewModel.getBusData(completion: { (busData) in
+        viewModel.getBusData(completion: { [weak self] (busData) in
 
             if let busData = busData {
 
-                for eachBus in busData {
+                DispatchQueue.main.async {
+                    for eachBus in busData {
 
-                    DispatchQueue.main.async {
+                    
                         let busCurrentLocation = YMKPoint(latitude: (eachBus.lat), longitude: (eachBus.lng))
-                        let mapObjects = self.mapView.mapWindow.map.mapObjects
-                        let placemark = mapObjects.addPlacemark(with: busCurrentLocation)
+                        let mapObjects = self?.mapView.mapWindow.map.mapObjects
+                        let placemark = mapObjects?.addPlacemark(with: busCurrentLocation)
 
-                        placemark.opacity = 1
-                        placemark.setIconWith(self.busImage)
+                        placemark?.opacity = 1
+                        placemark?.setIconWith(self!.busImage)
 
                         DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
-                            mapObjects.remove(with: placemark)
+                            mapObjects?.remove(with: placemark!)
                         }
                     }
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
-                    self.showBusOnMap()
+                    self?.showBusOnMap()
                 }
             } else {
                 print("Cant get BusData")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    self.showBusOnMap()
+                    self?.showBusOnMap()
                 }
             }
         })

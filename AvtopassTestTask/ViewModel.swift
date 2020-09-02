@@ -10,7 +10,7 @@ import Foundation
 
 class ViewModel {
 
-    var networkManager = NetworkManager()
+    let networkManager = NetworkManager()
 
     func getBusData(completion: @escaping (_ busData: BusModel?) -> ()) {
         networkManager.dataRequestFromAPI(url: API.url, compeletion: { (data) in
