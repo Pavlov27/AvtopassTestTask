@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,16 @@
 		8FFD8D2E24FDAA7400741BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFD8D2C24FDAA7400741BFD /* Main.storyboard */; };
 		8FFD8D3024FDAA7500741BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FFD8D2F24FDAA7500741BFD /* Assets.xcassets */; };
 		8FFD8D3324FDAA7500741BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFD8D3124FDAA7500741BFD /* LaunchScreen.storyboard */; };
+		8FFD8D3B24FE86E500741BFD /* busRoute.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FFD8D3A24FE86E500741BFD /* busRoute.json */; };
+		8FFD8D3D24FE8C3300741BFD /* BusCurrentInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFD8D3C24FE8C3300741BFD /* BusCurrentInfoModel.swift */; };
+		8FFD8D3F24FE8D2300741BFD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFD8D3E24FE8D2300741BFD /* ViewModel.swift */; };
+		8FFD8D4124FE8D3C00741BFD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFD8D4024FE8D3C00741BFD /* NetworkManager.swift */; };
+		8FFD8D4324FFAECF00741BFD /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFD8D4224FFAECF00741BFD /* Api.swift */; };
+		EF38F1CFAFE13C64EEF4F9D1 /* Pods_AvtopassTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE691C543B243AB96452E900 /* Pods_AvtopassTestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440B63B2AC83721C56D38509 /* Pods-AvtopassTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvtopassTestTask.debug.xcconfig"; path = "Target Support Files/Pods-AvtopassTestTask/Pods-AvtopassTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		8FFD8D2324FDAA7400741BFD /* AvtopassTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvtopassTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFD8D2624FDAA7400741BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFD8D2824FDAA7400741BFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,13 @@
 		8FFD8D2F24FDAA7500741BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FFD8D3224FDAA7500741BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FFD8D3424FDAA7500741BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FFD8D3A24FE86E500741BFD /* busRoute.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = busRoute.json; sourceTree = "<group>"; };
+		8FFD8D3C24FE8C3300741BFD /* BusCurrentInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCurrentInfoModel.swift; sourceTree = "<group>"; };
+		8FFD8D3E24FE8D2300741BFD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8FFD8D4024FE8D3C00741BFD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8FFD8D4224FFAECF00741BFD /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		A437D576D4ED53996C22379D /* Pods-AvtopassTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvtopassTestTask.release.xcconfig"; path = "Target Support Files/Pods-AvtopassTestTask/Pods-AvtopassTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		DE691C543B243AB96452E900 /* Pods_AvtopassTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvtopassTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF38F1CFAFE13C64EEF4F9D1 /* Pods_AvtopassTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DCB6ACC1D4A1AA580BD328C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE691C543B243AB96452E900 /* Pods_AvtopassTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FFD8D1A24FDAA7400741BFD = {
 			isa = PBXGroup;
 			children = (
 				8FFD8D2524FDAA7400741BFD /* AvtopassTestTask */,
 				8FFD8D2424FDAA7400741BFD /* Products */,
+				940A5AB7E8856E779A123E33 /* Pods */,
+				7DCB6ACC1D4A1AA580BD328C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +84,26 @@
 				8FFD8D2624FDAA7400741BFD /* AppDelegate.swift */,
 				8FFD8D2824FDAA7400741BFD /* SceneDelegate.swift */,
 				8FFD8D2A24FDAA7400741BFD /* ViewController.swift */,
+				8FFD8D3E24FE8D2300741BFD /* ViewModel.swift */,
+				8FFD8D4024FE8D3C00741BFD /* NetworkManager.swift */,
+				8FFD8D3C24FE8C3300741BFD /* BusCurrentInfoModel.swift */,
+				8FFD8D4224FFAECF00741BFD /* Api.swift */,
+				8FFD8D3A24FE86E500741BFD /* busRoute.json */,
 				8FFD8D2C24FDAA7400741BFD /* Main.storyboard */,
 				8FFD8D2F24FDAA7500741BFD /* Assets.xcassets */,
 				8FFD8D3124FDAA7500741BFD /* LaunchScreen.storyboard */,
 				8FFD8D3424FDAA7500741BFD /* Info.plist */,
 			);
 			path = AvtopassTestTask;
+			sourceTree = "<group>";
+		};
+		940A5AB7E8856E779A123E33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				440B63B2AC83721C56D38509 /* Pods-AvtopassTestTask.debug.xcconfig */,
+				A437D576D4ED53996C22379D /* Pods-AvtopassTestTask.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FFD8D3724FDAA7500741BFD /* Build configuration list for PBXNativeTarget "AvtopassTestTask" */;
 			buildPhases = (
+				658771E09863426B9F57479A /* [CP] Check Pods Manifest.lock */,
 				8FFD8D1F24FDAA7400741BFD /* Sources */,
 				8FFD8D2024FDAA7400741BFD /* Frameworks */,
 				8FFD8D2124FDAA7400741BFD /* Resources */,
+				DA3930CEA15E8C94C48BF9F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,19 +168,66 @@
 			files = (
 				8FFD8D3324FDAA7500741BFD /* LaunchScreen.storyboard in Resources */,
 				8FFD8D3024FDAA7500741BFD /* Assets.xcassets in Resources */,
+				8FFD8D3B24FE86E500741BFD /* busRoute.json in Resources */,
 				8FFD8D2E24FDAA7400741BFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		658771E09863426B9F57479A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AvtopassTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA3930CEA15E8C94C48BF9F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AvtopassTestTask/Pods-AvtopassTestTask-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AvtopassTestTask/Pods-AvtopassTestTask-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AvtopassTestTask/Pods-AvtopassTestTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FFD8D1F24FDAA7400741BFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFD8D4124FE8D3C00741BFD /* NetworkManager.swift in Sources */,
+				8FFD8D3F24FE8D2300741BFD /* ViewModel.swift in Sources */,
 				8FFD8D2B24FDAA7400741BFD /* ViewController.swift in Sources */,
 				8FFD8D2724FDAA7400741BFD /* AppDelegate.swift in Sources */,
+				8FFD8D3D24FE8C3300741BFD /* BusCurrentInfoModel.swift in Sources */,
+				8FFD8D4324FFAECF00741BFD /* Api.swift in Sources */,
 				8FFD8D2924FDAA7400741BFD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +370,7 @@
 		};
 		8FFD8D3824FDAA7500741BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440B63B2AC83721C56D38509 /* Pods-AvtopassTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +389,7 @@
 		};
 		8FFD8D3924FDAA7500741BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A437D576D4ED53996C22379D /* Pods-AvtopassTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
